@@ -55,7 +55,7 @@ function navigateToBoard() {
 function render(state, changed) {
   const { dirty, error, saveSuccessful, saving, selectedName, updates } = state;
 
-  const names = updates ? Object.keys(updates) : [];
+  const names = updates ? Object.keys(updates) : ["Steve", "Fiona"];
   if (changed.updates) {
     // Populate the names
     const nameOptions = names.map(
