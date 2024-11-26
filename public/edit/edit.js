@@ -55,12 +55,15 @@ function navigateToBoard() {
 function render(state, changed) {
   const { dirty, error, saveSuccessful, saving, selectedName, updates } = state;
 
-  const names = updates ? Object.keys(updates) : ["Steve", "Fiona"];
+  const names = updates ? Object.keys(updates) : [];
   if (changed.updates) {
     // Populate the names
-    const nameOptions = names.map(
-      (name) => `<option value="${name}">${name}</option>`
-    );
+     const nameOptions = names.map(
+       (name) => `<option value="${name}">${name}</option>`);
+
+
+     console.log(nameOptions);
+
     nameSelect.innerHTML = nameOptions.join("\n");
   }
 
