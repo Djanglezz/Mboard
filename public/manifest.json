@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "MomBoard",
+  "name": "MBoard",
   "display": "fullscreen",
   "icons": [
     {
