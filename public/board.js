@@ -75,7 +75,7 @@ function render(state, changed) {
     title.textContent = state.error
       ? "⚠ No Data"
       : state.online
-      ? "MomBoard"
+      ? "MBoard"
       : "⊘ Offline";
   }
 
@@ -85,7 +85,7 @@ function render(state, changed) {
       let entries = Object.entries(updates);
       const sorted = sortByDate(entries);
       let recent = sorted.slice(0, 4);
-      shuffle(recent);
+      //shuffle(recent);
       const tileFragments = recent.map(([key, value]) =>
         isKeyForNote(key)
           ? renderNotesTile(value)
@@ -115,7 +115,6 @@ function renderMessageTile(name, data) {
     <span class="name">
       <strong>${name}</strong>
     </span>
-    ${spokeSpan}
   </div>
   </div>
 </div>`;
