@@ -84,7 +84,7 @@ function render(state, changed) {
       const { error, updates } = state;
       let entries = Object.entries(updates);
       const sorted = sortByDate(entries);
-      let recent = sorted.slice(0, 4);
+      let recent = sorted.slice(0, 6);
       //shuffle(recent);
       const tileFragments = recent.map(([key, value]) =>
         isKeyForNote(key)
